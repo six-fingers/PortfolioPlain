@@ -1,0 +1,43 @@
+body {
+  /* The image used */
+    /*background-image: url("img_parallax.jpg");*/
+  background-image: url("/bg.png");
+  background-color: black;
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin: 100px;
+  margin-top: 100px
+
+}
+
+.center {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.white {
+  color: white;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Didot.ttc);
+}
+
+.didot {
+    font-family: myFirstFont;
+    src: url(Didot.ttc);
+}
+
+* {
+    font-family: myFirstFont;
+    src: url(Didot.ttc);
+}

@@ -11,7 +11,7 @@
   <script type="text/javascript" src="//platform.linkedin.com/in.js">
     api_key:   78ib4822tfa2eq
     authorize: false
-    onLoad: onLinkedInLoad
+    onLoad: getProfileData
   </script>
 
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -32,28 +32,37 @@
 </head>
 
 <body background="../images/index-bg.png">
+  <!-- Restrict main Body in a col-md-6 -->
+  <div class="col-md-6 col-md-offset-3 center-middle">
 
-  <div onclick="liAuth()" class="loginsocbutton loginsocbutton__in" id="oauth_linkedin">click</div>
+    <h1 class="center-middle">Salvatore Seidita</h1>
 
 
-  <!-- <a id="cancel" href="#" onclick="cancelClicked()">Js Cancel</a>
-  <a href="index.php?h=michael">Php Cancel</a> -->
-  <h1 class="center-middle">Seidita Salvatore</h1>
-  <div class="col-sm-6 col-sm-offset-3 center-middle">
-    <!-- <img class="my-image" src="../images/meo.jpg" alt="image of me"> -->
-  </div>
 
-  <div class="col-sm-6 col-sm-offset-3 center-middle">
-    <h4>
-      I graduated in April 2017 in Information Technology, studying different subjects like programming languages, computer networks and databases.
-      Throughout my previous experience I now have good knowledge of Java and C programming Languages, Networks(CCNA Certifications) and databases. I have worked with Cisco devices.
-      I have undertaken practical work experience with Windows, Mac and Linux devices.
-      I am able to work with teams of software developer and get hands-on experience of working with a variety of different technologies.
-      I love working as part of a team to make sure that customers are happy and that deadlines are met.
-    </h4>
 
+
+    <!-- LINKED IN BASIC INFO -->
+    <div id=linkedInBasicInfo></div>
+
+
+
+    <!-- Image -->
+    <div class="col-md-3">
+      <img class="my-image" src="../images/me.jpg" alt="image of me">
+    </div>
+    <!-- Intro Sentence -->
+    <div class="col-md-9">
+      <h4>
+        I graduated in April 2017 in Information Technology, studying different subjects like programming languages, computer networks and databases.
+        Throughout my previous experience I now have good knowledge of Java and C programming Languages, Networks(CCNA Certifications) and databases. I have worked with Cisco devices.
+        I have undertaken practical work experience with Windows, Mac and Linux devices.
+        I am able to work with teams of software developer and get hands-on experience of working with a variety of different technologies.
+        I love working as part of a team to make sure that customers are happy and that deadlines are met.
+      </h4>
+    </div>
 
     <h1>Development Skills</h1>
+    <!-- SKILLS -->
     <div class="col-md-12">
 
       <div class="col-md-4 skill-div">
@@ -108,8 +117,8 @@
 
     </div>
 
-
-    <form class="col-sm-6 col-sm-offset-3" action="/index.php">
+    <!-- FORM -->
+    <form class="col-md-6 col-md-offset-3" action="/index.php">
 
       <h1>Get in Contact</h1>
 

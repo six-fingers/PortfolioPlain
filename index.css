@@ -22,3 +22,7 @@ body {
 .skill-div {
   min-height: 250px;
 }
+
+.table {
+  background-color: white !important;
+}

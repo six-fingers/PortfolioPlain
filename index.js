@@ -1,43 +1,34 @@
 
+// console.log(IN);
 
+// function authorize() {
+//   console.log('authorizing');
+//
+//   IN.API.Raw("/people/mhN2C5AlCz/positions").result(
+//     function(a) {
+//       console.log(a);
+//     }
+//   ).error(
+//     function() {
+//       console.log('error');
+//     }
+//   );
+//
+// }
 
-function buildLinkedInTable(info) {
-  console.log(info);
-  console.log(document.querySelector('#linkedInBasicInfo'));
+// IN.Event.on(IN, "auth", authorize);
 
-  console.log(typeof info);
-  console.log(Object.keys(info.values[0]));
+// IN.API.Connections("mhN2C5AlCz")
+//   .result(function(result) {
+//     console.log(result);
+//   })
+//   .error(function(err) {
+//     alert(err);
+//   });
 
-  Object.keys(info.values[0]).forEach(
-    function(name) {
-      console.log(name, info.values[0][name]);
-    }
-  );
+// IN.API.Raw(url).method(methodType).body(bodyContent).result(resultCallback);
 
-  var table = ` <table class="table" border=1>
-                  <tr>
-                    <td rowspan="3" class="middle-center">
-                      <img src="${info.values[0].pictureUrl}">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>${info.values[0].firstName} ${info.values[0].lastName}</td>
-                  </tr>
-                  <tr>
-                    <td>${info.values[0].headline}</td>
-                  </tr>
-                  <tr>
-                    <td colspan="2">The information presented in this table are dinamically retrieved from LinkedIn using their Javascript SDK</td>
-                  </tr>
-                </table>`;
-
-  document.querySelector('#linkedInBasicInfo').innerHTML = table;
-}
-
-
-
-// $results.innerHTML = "Wonderful";
-
+// IN.API.Raw().url(url).method(methodType).body(bodyContent).result(resultCallback);
 
 
 
@@ -53,11 +44,32 @@ function getProfileData() {
   IN.API.Profile("mhN2C5AlCz")
     .result(function(result) {
       console.log(result);
-      buildLinkedInTable(result)
+      buildLinkedInBasicInfoTable(result)
     })
     .error(function(err) {
       alert(err);
     });
+}
+
+// BUILT LINKED IN BASIC INFO TABLE
+function buildLinkedInBasicInfoTable(info) {
+  var table = ` <table class="table table-striped" border=1>
+                  <tr>
+                    <td rowspan="3" class="middle-center">
+                      <img src="${info.values[0].pictureUrl}">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>${info.values[0].firstName} ${info.values[0].lastName}</td>
+                  </tr>
+                  <tr>
+                    <td>${info.values[0].headline}</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">The information presented in this table are dinamically retrieved from LinkedIn using their Javascript SDK</td>
+                  </tr>
+                </table>`;
+  document.querySelector('#linkedInBasicInfo').innerHTML = table;
 }
 
 // SEND EMAIL FUNCTION

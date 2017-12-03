@@ -31,16 +31,16 @@
 // mail($to, $subject, $body);//, $headers);
 
 
-    $filename = 'file';
-    $path = '';
-    $file = $path . "/" . $filename;
+    // $filename = 'file';
+    // $path = '';
+    // $file = $path . "/" . $filename;
 
-    $mailto = 'salvatore.seidita@yahoo.com';
+    $mailto = 'salvatore@seidita.co.uk';
     $subject = 'Contact Form from '.$_POST['name'];
     $message = $_POST['message'];
 
-    $content = file_get_contents($file);
-    $content = chunk_split(base64_encode($content));
+    // $content = file_get_contents($file);
+    // $content = chunk_split(base64_encode($content));
 
     // a random hash will be necessary to send mixed content
     $separator = md5(time());
@@ -66,7 +66,7 @@
     $body .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"" . $eol;
     $body .= "Content-Transfer-Encoding: base64" . $eol;
     $body .= "Content-Disposition: attachment" . $eol;
-    $body .= $content . $eol;
+    // $body .= $content . $eol;
     $body .= "--" . $separator . "--";
 
     //SEND Mail

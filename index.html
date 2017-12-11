@@ -32,13 +32,38 @@
 </head>
 
 <body background="../images/index-bg.png">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-default bg-faded">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#devSkills">Development Skills</a></li>
+          <li><a href="#contactMe">Contact Me</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
   <!-- Restrict main Body in a col-md-6 -->
   <div class="col-md-6 col-md-offset-3 center-middle">
 
     <h1 class="center-middle">Salvatore Seidita</h1>
     <!-- Image -->
     <div class="col-md-3">
-      <img class="my-image" src="../images/me.jpg" alt="image of me">
+      <!-- <img class="my-image" src="../images/me.jpg" alt="image of me"> -->
     </div>
     <!-- Intro Sentence -->
     <div class="col-md-9">
@@ -51,7 +76,7 @@
       </h4>
     </div>
 
-    <h1>Development Skills</h1>
+    <h1 id="devSkills">Development Skills</h1>
     <!-- SKILLS -->
     <div class="col-md-12">
 
@@ -111,7 +136,7 @@
     <div id=linkedInBasicInfo></div>
 
     <!-- FORM -->
-    <form class="col-md-6 col-md-offset-3" action="/index.php">
+    <form id="contactMe" class="col-md-6 col-md-offset-3" action="/index.php">
 
       <h1>Get in Contact</h1>
 

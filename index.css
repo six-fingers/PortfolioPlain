@@ -1,5 +1,10 @@
+* {
+ font-family: 'Raleway';
+}
+
 body {
     background-color: grey;
+    padding-top: 70px;
 }
 
 .my-image {
@@ -25,4 +30,12 @@ body {
 
 .table {
   background-color: white !important;
+}
+
+.spacer {
+  width: 70px;
+}
+
+form {
+  margin-bottom: 50%;
 }

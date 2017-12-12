@@ -13,20 +13,17 @@
     authorize: false
     onLoad: getProfileData
   </script>
-
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
   <script type="text/javascript" src="../index.js"></script>
-
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link href="index.css" rel="stylesheet"/>
 
 </head>
@@ -34,7 +31,7 @@
 <body background="../images/index-bg.png">
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-default bg-faded">
+  <nav class="navbar navbar-fixed-top navbar-default bg-faded">
     <div class="container-fluid">
 
       <div class="navbar-header">
@@ -59,7 +56,6 @@
 
   <!-- Restrict main Body in a col-md-6 -->
   <div class="col-md-6 col-md-offset-3 center-middle">
-
     <h1 class="center-middle">Salvatore Seidita</h1>
     <!-- Image -->
     <div class="col-md-3">
@@ -76,7 +72,8 @@
       </h4>
     </div>
 
-    <h1 id="devSkills">Development Skills</h1>
+    <div class="col-md-12 spacer" id="devSkills"></div>
+    <h1 class="col-md-12">Development Skills</h1>
     <!-- SKILLS -->
     <div class="col-md-12">
 
@@ -135,34 +132,39 @@
     <!-- LINKED IN BASIC INFO -->
     <div id=linkedInBasicInfo></div>
 
-    <!-- FORM -->
-    <form id="contactMe" class="col-md-6 col-md-offset-3" action="/index.php">
+    <div class="col-md-12 spacer" id="contactMe"></div>
 
-      <h1>Get in Contact</h1>
+    <div class="col-md-12">
+      <!-- FORM -->
+      <form class="col-md-8 col-md-offset-2" action="/index.php">
 
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter your name...">
-      </div>
+        <h1>Get in Contact</h1>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email...">
-      </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter your name...">
+        </div>
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="message" placeholder="Type your message..." rows="5" cols="80"></textarea>
-      </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email...">
+        </div>
 
-      <!-- <div class="form-group">
-        <label for="exampleI">Attach File</label>
-        <input type="file" class="form-control-file" id="file">
-      </div> -->
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" placeholder="Type your message..." rows="5" cols="80"></textarea>
+        </div>
 
-      <button type="button" class="btn btn-primary" onclick="send()">Send</button>
+        <!-- <div class="form-group">
+          <label for="exampleI">Attach File</label>
+          <input type="file" class="form-control-file" id="file">
+        </div> -->
 
-    </form>
+        <button type="button" class="btn btn-primary" onclick="send()">Send</button>
+
+      </form>
+    </div>
+
 
   </div>
 

@@ -4,7 +4,6 @@
 
 body {
     background-color: grey;
-    padding-top: 70px;
 }
 
 .my-image {
@@ -33,9 +32,9 @@ body {
 }
 
 .spacer {
-  width: 70px;
+  padding-top: 70px;
 }
 
-form {
-  margin-bottom: 50%;
+.footer {
+  margin-bottom: 30vh;
 }
